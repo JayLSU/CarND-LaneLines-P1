@@ -12,8 +12,17 @@ The goals of this Project 1 is using computer vision techniques to find the lane
 
 [//]: # (Image References)
 
-[image1]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidWhiteCurve.jpg "solidWhiteCurve"
+[image1]: ../test_images_output/solidWhiteCurve.jpg "solidWhiteCurve"
 
+[image2]: ../test_images_output/solidWhiteRight.jpg "solidWhiteRight"
+
+[image3]: ../test_images_output/solidYellowCurve.jpg "solidYellowCurve"
+
+[image4]: ../test_images_output/solidYellowCurve2.jpg "solidYellowCurve2"
+
+[image5]: ../test_images_output/solidYellowLeft.jpg "solidYellowLeft"
+
+[image6]: ../test_images_output/whiteCarLaneSwitch.jpg "whiteCarLaneSwitch"
 
 ---
 
@@ -32,8 +41,17 @@ My pipeline consisted of following steps:
 
 I attach the output images of my pipeline process, whose inputs are 6 example images.
 
-![alt text][image1]
+![solidWhiteCurve][image1]
 
+![solidWhiteRight][image2]
+
+![solidYellowCurve][image3]
+
+![solidYellowCurve2][image4]
+
+![solidYellowLeft][image5]
+
+![whiteCarLaneSwitch][image6]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
