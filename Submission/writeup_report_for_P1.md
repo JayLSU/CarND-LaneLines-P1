@@ -53,6 +53,7 @@ I attach the output images of my pipeline process, whose inputs are 6 example im
 
 ![whiteCarLaneSwitch][image6]
 
+You can also check the video outputs in [test_videos_output](../test_videos_output).
 
 ### 2. Identify potential shortcomings with your current pipeline
 
