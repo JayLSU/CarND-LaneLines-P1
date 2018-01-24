@@ -12,7 +12,17 @@ The goals of this Project 1 is using computer vision techniques to find the lane
 
 [//]: # (Image References)
 
-[image1]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/grayscale.jpg "Grayscale"
+[image1]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidWhiteCurve.jpg "solidWhiteCurve"
+
+[image2]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidWhiteRight.jpg "solidWhiteRight"
+
+[image3]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidYellowCurve.jpg "solidYellowCurve"
+
+[image4]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidYellowCurve2.jpg "solidYellowCurve2"
+
+[image5]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidYellowLeft.jpg "solidYellowLeft"
+
+[image6]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/whiteCarLaneSwitch.jpg "whiteCarLaneSwitch"
 
 ---
 
@@ -39,17 +49,30 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 ![alt text][image1]
 
+![alt text][image2]
+
+![alt text][image3]
+
+![alt text][image4]
+
+![alt text][image5]
+
+![alt text][image6]
+
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+One potential shortcoming would be when the color of lane lines are not quite clear under the road background. Just as shown in challenge video. Since the contrast of lanes and road background color are limited, the edges of the lines can not be identified and detected. 
 
-One potential shortcoming would be what would happen when ... 
+Another shortcoming could be bad detecting performance in dark turnnels or low light condition or bad weather condition, which will also leads to bad detection of road lanes. 
 
-Another shortcoming could be ...
+One more shortcoming could be the line detection and drawing for shraply curved road lanes. 
 
+I modified draw_lines() by groupding different lines into left and right lines according to their slopes. 
+To avoid slope to be infinity and increasing nonlinearly, I transformed the slopes in radius unit. Since I assumed that the car was always in the middle of the lane and camera was fixed, so the lanes slopes should be in two major ranges, one for left and one for right. Through analyzing the slopes in the example images, I set two thresholds for slope detection in my code (0.7 and 0.5) to exclude too vertical lines and too honrizontal ones. In this method, we can avoid some outliers lines in the selected area and properly draw lines on the original lanes. In fact, if the car is not the middle of the lanes, the slopes could exceed my thresholds. To develop a dynamic method to find out the major slopes in different ranges, more complexed method could be used. For example, we can divided 0 to pi/2 into 10 pieces, then use counter to identify the most one, that usually would be the detected lane lines' slopes. Therefore, we can exclude outlier lines in the selected area, which could be detected old lane lines, some stickers, or tree branches.
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement for the first two shortcomings could improve the contrast of the image which may enhance the identification of lanes. Or use other color space to extract the lane lines from the image, for example HSI image space, HSV image space, and maybe something else.
 
-Another potential improvement could be to ...
+Another potential improvement for the third shortcoming could use calculate some offset for line drawing and according to the offset, draw curved lines instead of straight lines when necessary.
