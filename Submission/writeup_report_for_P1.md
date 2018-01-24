@@ -14,15 +14,6 @@ The goals of this Project 1 is using computer vision techniques to find the lane
 
 [image1]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidWhiteCurve.jpg "solidWhiteCurve"
 
-[image2]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidWhiteRight.jpg "solidWhiteRight"
-
-[image3]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidYellowCurve.jpg "solidYellowCurve"
-
-[image4]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidYellowCurve2.jpg "solidYellowCurve2"
-
-[image5]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/solidYellowLeft.jpg "solidYellowLeft"
-
-[image6]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/whiteCarLaneSwitch.jpg "whiteCarLaneSwitch"
 
 ---
 
@@ -41,23 +32,8 @@ My pipeline consisted of following steps:
 
 I attach the output images of my pipeline process, whose inputs are 6 example images.
 
-
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
 ![alt text][image1]
 
-![alt text][image2]
-
-![alt text][image3]
-
-![alt text][image4]
-
-![alt text][image5]
-
-![alt text][image6]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
