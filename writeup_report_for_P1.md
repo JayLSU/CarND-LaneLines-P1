@@ -12,7 +12,7 @@ The goals of this Project 1 is using computer vision techniques to find the lane
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: https://github.com/JayLSU/CarND-LaneLines-P1/tree/master/test_images_output/grayscale.jpg "Grayscale"
 
 ---
 
